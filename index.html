@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--signup form-->
+    <form onsubmit="togglePopup">
+        <div class="container">
+          <div class="content">
+            <h1>Sign up</h1>
+            <p>If you don't have an account, fill the form please!</p>
+            <hr>
+        
+            <label for="name"><b>Name</b></label><br>
+            <input type="text" placeholder="Enter your name"><br>
+
+            <label for="email"><b>Email</b></label><br>
+            <input type="text" placeholder="Enter your email"><br>
+
+            <label for="password"><b>Password</b></label><br>
+            <input type="password" placeholder="Enter your password"><br>
+
+            <label>
+            <input type="checkbox" name="remember" id="checky">
+            Remember me</label><br>
+
+            <!-- <div class="button">
+                <button type="submit" class="submitBtn">Submit</button>
+            </div> -->
+          </div>
+          
+         <p class="logInfo">Do you have an account? if yes click the button below to log in</p>
+          <button  type="submit" class="clickbtn" >Click here</button>
+        
+        </div>
+    </form>
+    <div class="form-popup" id="myForm">
+        <div class="overlay"></div>
+        <form  class="form-container">
+          <h1>Login</h1>
+          <hr>
+      
+          <label for="email"><b>Email</b></label><br>
+          <input type="text" placeholder="Enter Email" name="email" required><br>
+      
+          <label for="psw"><b>Password</b></label><br>
+          <input type="password" placeholder="Enter Password" name="psw" required><br>
+      
+          <button type="submit" class="btn">Login</button><br>
+          <button type="button" class="btn cancel" onclick="togglePopup()">Close</button><br>
+        </form>
+        
+        
+    </div>
+    
+    <script type="text/javascript">
+        function togglePopup(){
+            event.preventDefault();
+            
+            document.getElementById("myForm").classList.toggle("active");      
+         }
+      
+    </script>
+</body>
+</html>

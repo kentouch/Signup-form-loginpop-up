@@ -1,0 +1,160 @@
+body {
+    font-family:'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* sign up form */
+.container{
+    padding: 40px, 30px, 25px, 15px;
+    margin: 50px 20px 20px 50px;
+    box-shadow: 10px;
+    background-color: rgb(143, 143, 113);
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+.content{
+    padding: 20px, 15px, 20px, 15px;
+    margin: 50px 20px 20px 50px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    height: 0px;
+    width: 80%;
+    padding: 15px;
+    margin: 2px 0 5px 0;
+    display:inline-block;
+    border: none;
+    background: #383333;
+  }
+input[type=text]:focus, input[type=password]:focus {
+    outline: none;
+    color: beige;
+ }
+
+ .button{
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+ }
+ .submitBtn{
+     font-size: 14px;
+     padding: 4px 20px;
+     cursor: pointer;
+ }
+ .submitBtn:hover{
+     font-family: sans-serif;
+     background-color: rgb(99, 134, 64);
+     color: white;
+     border: none;
+ }
+@media screen and (max-width : 300px) {
+    .submitBtn{
+        width: 100%;
+    }
+}
+
+/*log in form */
+
+/* The popup form - hidden by default */
+.logInfo{
+    
+    font-size: 12px;
+    font-style: normal;
+    padding-left: 50px;
+    padding-bottom: 50px
+    
+}
+.clickbtn{
+    background-color: #555;
+    color: rgb(232, 231, 240);
+    padding: 13px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 120px;
+    right: 28px;
+    
+}
+.clickbtn:hover{
+    color:whitesmoke;
+    outline: none;
+}
+
+
+  .form-popup .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition:all 200ms ease-in-out;
+    z-index: 1;
+    display: none;
+    pointer-events: none;
+  }
+
+  
+  /* Add styles to the form container */
+  .form-popup .form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition:all 200ms ease-in-out;
+    width: 300px;
+    height: 400px;
+    z-index: 2;
+    padding: 40px;
+    background-color: rgb(117, 113, 113);
+    max-width: 80%;
+
+  }
+
+  .form-popup.active .overlay{
+    display: block;
+    pointer-events: all;
+  }
+  .form-popup.active .form-container{
+  /* Nd deep understand*/
+    transform: translate(-50%, -50%) scale(1);/* Nd deep understand*/
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 85%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover {
+    opacity: 1;
+  }
+  
+ 
